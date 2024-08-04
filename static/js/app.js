@@ -136,18 +136,10 @@ function buildSchemaSection(name, objects) {
 
   var titles = {
     "table":             "Tables",
-    "view":              "Views",
-    "materialized_view": "Materialized Views",
-    "function":          "Functions",
-    "sequence":          "Sequences"
   };
 
   var icons = {
     "table":             '<i class="fa fa-table"></i>',
-    "view":              '<i class="fa fa-table"></i>',
-    "materialized_view": '<i class="fa fa-table"></i>',
-    "function":          '<i class="fa fa-bolt"></i>',
-    "sequence":          '<i class="fa fa-circle-o"></i>'
   };
 
   var klass = "";
@@ -157,7 +149,7 @@ function buildSchemaSection(name, objects) {
   section += "<div class='schema-name'><i class='fa fa-folder-o'></i><i class='fa fa-folder-open-o'></i> " + name + "</div>";
   section += "<div class='schema-container'>";
 
-  ["table", "view", "materialized_view", "function", "sequence"].forEach(function(group) {
+  ["table"].forEach(function(group) {
     group_klass = "";
     if (name == "public" && group == "table") group_klass = "expanded";
 
@@ -301,10 +293,10 @@ function resetTable() {
   $("#results_view").html("").hide();
 
   $("#results").
-    data("mode", "").
-    removeClass("empty").
-    removeClass("no-crop").
-    show();
+  data("mode", "").
+  removeClass("empty").
+  removeClass("no-crop").
+  show();
 }
 
 function performTableAction(table, action, el) {
@@ -577,8 +569,8 @@ function updatePaginator(pagination) {
   }
 
   $(".current-page").
-    data("page", pagination.page).
-    data("pages", pagination.pages_count);
+  data("page", pagination.page).
+  data("pages", pagination.pages_count);
 
   if (pagination.page > 1) {
     $(".prev-page").prop("disabled", "");
@@ -721,9 +713,9 @@ function renderResultsView(title, content) {
   var content = $("<pre/>").text(content);
 
   $("<div/>").
-    html("<i class='fa fa-copy'></i>").
-    addClass("copy").
-    appendTo(content);
+  html("<i class='fa fa-copy'></i>").
+  addClass("copy").
+  appendTo(content);
 
   $("#results_view").html("");
   title.appendTo("#results_view");
@@ -1208,16 +1200,16 @@ function bindTableHeaderMenu() {
 
         case "unique_values":
           showUniqueColumnsValues(
-            $("#results").data("table"), // table name
-            $(context).data("name"),     // column name
-            menuItem.data("counts")      // display counts
+              $("#results").data("table"), // table name
+              $(context).data("name"),     // column name
+              menuItem.data("counts")      // display counts
           );
           break;
 
         case "num_stats":
           showFieldNumStats(
-            $("#results").data("table"), // table name
-            $(context).data("name")      // column name
+              $("#results").data("table"), // table name
+              $(context).data("name")      // column name
           );
           break;
       }
@@ -1259,27 +1251,6 @@ function bindTableHeaderMenu() {
           $("select.filter").val("equal");
           $("#table_filter_value").val(colValue);
           $("#rows_filter").submit();
-      }
-    }
-  });
-}
-
-function bindCurrentDatabaseMenu() {
-  $("#current_database").contextmenu({
-    target: "#current_database_context_menu",
-    onItem: function(context, e) {
-      var menuItem = $(e.target);
-
-      switch(menuItem.data("action")) {
-        case "show_db_stats":
-          showDatabaseStats();
-          break;
-        case "download_db_stats":
-          downloadDatabaseStats();
-          break;
-        case "export":
-          openInNewWindow("api/export");
-          break;
       }
     }
   });
@@ -1341,7 +1312,6 @@ function getQuotedSchemaTableName(table) {
 
 function bindContextMenus() {
   bindTableHeaderMenu();
-  bindCurrentDatabaseMenu();
 
   $(".schema-group ul").each(function(id, el) {
     var group = $(el).data("group");
@@ -1384,32 +1354,6 @@ function bindContextMenus() {
         }
       });
     }
-  });
-}
-
-function toggleDatabaseSearch() {
-  $("#current_database").toggle();
-  $("#database_search").toggle();
-}
-
-function enableDatabaseSearch(data) {
-  var input = $("#database_search");
-
-  input.typeahead("destroy");
-
-  input.typeahead({
-    source: data,
-    minLength: 0,
-    items: "all",
-    autoSelect: false,
-    fitToElement: true
-  });
-
-  input.typeahead("lookup").focus();
-
-  input.on("focusout", function(e){
-    toggleDatabaseSearch();
-    input.off("focusout");
   });
 }
 
@@ -1706,13 +1650,6 @@ $(document).ready(function() {
     }
   });
 
-  $("#current_database").on("click", function(e) {
-    apiCall("get", "/databases", {}, function(resp) {
-      toggleDatabaseSearch();
-      enableDatabaseSearch(resp);
-    });
-  });
-
   $("#database_search").change(function(e) {
     var current = $("#database_search").typeahead("getActive");
     if (current && current == $("#database_search").val()) {
@@ -1740,7 +1677,6 @@ $(document).ready(function() {
     disconnect(function() {
       showConnectionSettings();
       resetTable();
-      $("#close_connection_window").hide();
     });
   });
 
