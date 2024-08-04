@@ -11,6 +11,7 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
+	"github.com/jessevdk/go-flags"
 	"github.com/sirupsen/logrus"
 
 	"github.com/rapidappio/pgweb/pkg/api"
