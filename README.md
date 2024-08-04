@@ -2,10 +2,10 @@
 
 Simple web-based and cross platform PostgreSQL database explorer.
 
-[![Release](https://img.shields.io/github/release/sosedoff/pgweb.svg?label=Release)](https://github.com/sosedoff/pgweb/releases)
-[![Linux Build](https://github.com/sosedoff/pgweb/actions/workflows/checks.yml/badge.svg)](https://github.com/sosedoff/pgweb/actions?query=branch%3Amaster)
-[![Go Report Card](https://goreportcard.com/badge/github.com/sosedoff/pgweb)](https://goreportcard.com/report/github.com/sosedoff/pgweb)
-[![GoDoc](https://godoc.org/github.com/sosedoff/pgweb?status.svg)](https://godoc.org/github.com/sosedoff/pgweb)
+[![Release](https://img.shields.io/github/release/sosedoff/pgweb.svg?label=Release)](https://github.com/rapidappio/pgweb/releases)
+[![Linux Build](https://github.com/rapidappio/pgweb/actions/workflows/checks.yml/badge.svg)](https://github.com/rapidappio/pgweb/actions?query=branch%3Amaster)
+[![Go Report Card](https://goreportcard.com/badge/github.com/rapidappio/pgweb)](https://goreportcard.com/report/github.com/rapidappio/pgweb)
+[![GoDoc](https://godoc.org/github.com/rapidappio/pgweb?status.svg)](https://godoc.org/github.com/rapidappio/pgweb)
 [![Docker Pulls](https://img.shields.io/docker/pulls/sosedoff/pgweb.svg)](https://hub.docker.com/r/sosedoff/pgweb/)
 
 ## Overview
@@ -29,7 +29,7 @@ Very easy to use and packs just the right amount of features.
 - Query history.
 - Server bookmarks.
 
-Visit [WIKI](https://github.com/sosedoff/pgweb/wiki) for more details.
+Visit [WIKI](https://github.com/rapidappio/pgweb/wiki) for more details.
 
 ## Demo
 
@@ -37,8 +37,8 @@ Visit https://pgweb-demo.fly.dev/ to see Pgweb in action.
 
 ## Installation
 
-- [Precompiled binaries](https://github.com/sosedoff/pgweb/releases) for supported operating systems are available.
-- [More installation options](https://github.com/sosedoff/pgweb/wiki/Installation)
+- [Precompiled binaries](https://github.com/rapidappio/pgweb/releases) for supported operating systems are available.
+- [More installation options](https://github.com/rapidappio/pgweb/wiki/Installation)
 
 ## Usage
 
@@ -101,8 +101,8 @@ make test-all
 - Commit your changes
 - Execute test suite
 - Push your code and open a new pull request
-- Use [issues](https://github.com/sosedoff/pgweb/issues) for any questions
-- Check [wiki](https://github.com/sosedoff/pgweb/wiki) for extra documentation
+- Use [issues](https://github.com/rapidappio/pgweb/issues) for any questions
+- Check [wiki](https://github.com/rapidappio/pgweb/wiki) for extra documentation
 
 ## License
 

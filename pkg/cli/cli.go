@@ -11,17 +11,16 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
-	"github.com/jessevdk/go-flags"
 	"github.com/sirupsen/logrus"
 
-	"github.com/sosedoff/pgweb/pkg/api"
-	"github.com/sosedoff/pgweb/pkg/bookmarks"
-	"github.com/sosedoff/pgweb/pkg/client"
-	"github.com/sosedoff/pgweb/pkg/command"
-	"github.com/sosedoff/pgweb/pkg/connection"
-	"github.com/sosedoff/pgweb/pkg/metrics"
-	"github.com/sosedoff/pgweb/pkg/queries"
-	"github.com/sosedoff/pgweb/pkg/util"
+	"github.com/rapidappio/pgweb/pkg/api"
+	"github.com/rapidappio/pgweb/pkg/bookmarks"
+	"github.com/rapidappio/pgweb/pkg/client"
+	"github.com/rapidappio/pgweb/pkg/command"
+	"github.com/rapidappio/pgweb/pkg/connection"
+	"github.com/rapidappio/pgweb/pkg/metrics"
+	"github.com/rapidappio/pgweb/pkg/queries"
+	"github.com/rapidappio/pgweb/pkg/util"
 )
 
 var (

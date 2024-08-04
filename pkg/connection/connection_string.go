@@ -11,7 +11,7 @@ import (
 
 	"github.com/jackc/pgpassfile"
 
-	"github.com/sosedoff/pgweb/pkg/command"
+	"github.com/rapidappio/pgweb/pkg/command"
 )
 
 // Common errors

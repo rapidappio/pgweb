@@ -6,8 +6,8 @@ import (
 
 	"github.com/sirupsen/logrus"
 
-	"github.com/sosedoff/pgweb/pkg/client"
-	"github.com/sosedoff/pgweb/pkg/metrics"
+	"github.com/rapidappio/pgweb/pkg/client"
+	"github.com/rapidappio/pgweb/pkg/metrics"
 )
 
 type SessionManager struct {

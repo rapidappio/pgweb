@@ -3,8 +3,8 @@ package bookmarks
 import (
 	"testing"
 
-	"github.com/sosedoff/pgweb/pkg/command"
-	"github.com/sosedoff/pgweb/pkg/shared"
+	"github.com/rapidappio/pgweb/pkg/command"
+	"github.com/rapidappio/pgweb/pkg/shared"
 	"github.com/stretchr/testify/assert"
 )
 

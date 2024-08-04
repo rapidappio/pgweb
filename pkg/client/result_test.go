@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/sosedoff/pgweb/pkg/command"
+	"github.com/rapidappio/pgweb/pkg/command"
 	"github.com/stretchr/testify/assert"
 )
 
