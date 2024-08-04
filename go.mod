@@ -1,4 +1,4 @@
-module github.com/sosedoff/pgweb
+module github.com/rapidappio/pgweb
 
 go 1.22
 
