@@ -133,6 +133,10 @@ func ParseOptions(args []string) (Options, error) {
 		opts.HTTPPort = uint(parseInt)
 	}
 
+	if getPrefixedEnvVar("HOST") != "" {
+		opts.HTTPHost = getPrefixedEnvVar("HOST")
+	}
+
 	if getPrefixedEnvVar("LOCK_SESSION") != "" {
 		opts.LockSession = true
 		opts.Sessions = false
