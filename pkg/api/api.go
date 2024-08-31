@@ -216,6 +216,11 @@ func ConnectWithBookmark(id string) (*client.Client, error) {
 	return client.NewFromBookmark(bookmark)
 }
 
+// Health returns health
+func Health(c *gin.Context) {
+	successResponse(c, gin.H{"health": true})
+}
+
 // SwitchDb perform database switch for the client connection
 func SwitchDb(c *gin.Context) {
 	if command.Opts.LockSession {

@@ -21,6 +21,7 @@ func SetupRoutes(router *gin.Engine) {
 	root.GET("/", gin.WrapH(GetHome(command.Opts.Prefix)))
 	root.GET("/static/*path", gin.WrapH(GetAssets(command.Opts.Prefix)))
 	root.GET("/connect/:resource", ConnectWithBackend)
+	root.GET("/health", Health)
 
 	api := root.Group("/api")
 	SetupMiddlewares(api)
