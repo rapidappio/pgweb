@@ -212,6 +212,7 @@ func startServer() {
 	go func() {
 		metrics.SetHealthy(true)
 
+		fmt.Println("Listening on", fmt.Sprintf("%v:%v", options.HTTPHost, options.HTTPPort))
 		err := router.Run(fmt.Sprintf("%v:%v", options.HTTPHost, options.HTTPPort))
 		if err != nil {
 			fmt.Println("Cant start server:", err)

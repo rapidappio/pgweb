@@ -6,6 +6,7 @@ import (
 	"os"
 	"os/user"
 	"path/filepath"
+	"strconv"
 	"strings"
 
 	"github.com/jackc/pgpassfile"
@@ -125,6 +126,11 @@ func ParseOptions(args []string) (Options, error) {
 
 	if getPrefixedEnvVar("SESSIONS") != "" {
 		opts.Sessions = true
+	}
+
+	if getPrefixedEnvVar("PORT") != "" {
+		parseInt, _ := strconv.ParseInt(getPrefixedEnvVar("PORT"), 10, 32)
+		opts.HTTPPort = uint(parseInt)
 	}
 
 	if getPrefixedEnvVar("LOCK_SESSION") != "" {
