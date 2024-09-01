@@ -112,7 +112,7 @@ The MIT License (MIT). See [LICENSE](LICENSE) file for more details.
 curl -X POST http://localhost:8081/api/connect \
 -H "X-Session-ID: 953be069_9381_4119_9a66_df79ee71b922" \
 -H "Content-Type: application/x-www-form-urlencoded" \
--d "url=postgresql://u_953be069_9381_4119_9a66_df79ee71b922:puV2zrf23ttf03T8sM6jai71171qP7845v5e7iuy7hXtdDjdKo9h@pg.rapidapp.io:5432/db_953be069_9381_4119_9a66_df79ee71b922?sslmode=require&application_name=rapidapp_pgweb"
+-d "url=postgresql://..."
 
 
 curl -X GET http://localhost:8081/api/schemas \
