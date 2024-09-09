@@ -8,7 +8,7 @@
   left: 250px;
   right: 0;
   height: 50px;
-  background: #79589f;
+  background: #0FC0DF;
 }
 
 #nav ul {
@@ -84,7 +84,7 @@
   font-weight: bold;
   font-size: 14px;
   color: #fff;
-  background: #79589f;
+  background: #FEAD3D;
   z-index: 900;
 }
 
@@ -718,7 +718,7 @@
 }
 
 #edit_connection, #close_connection {
-  background: #79589f;
+  background: #FF5757;
   color: #fff;
   border-color: #fff;
 }
